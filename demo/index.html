@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video background example</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+
+<header></header>
+
+
+<div class="spacer"></div>
+
+
+
+<div class="back-video-section back-video">
+    <video src="video/SampleVideo_color.mp4" muted autoplay loop controls></video>
+    <div class="video-type">
+        HTML5
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+
+<div class="back-video-section back-video">
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/yltlJEdSAHw?autoplay=1&loop=1&playlist=yltlJEdSAHw" frameborder="0" allowfullscreen></iframe>
+    <div class="video-type">
+        Youtube
+    </div>
+</div>
+
+
+
+
+<script src="js/jquery-3.2.0.min.js"></script>
+
+<script src="../build/videoBackground.js"></script>
+
+<script>
+
+
+    $(window).on('resize load', function () {
+        $('.back-video').backgroundVideo();
+    });
+
+
+</script>
+
+</body>
+</html>
