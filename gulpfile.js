@@ -1,6 +1,5 @@
 var 	gulp         = require('gulp'),
         autoprefixer = require('gulp-autoprefixer'),
-        minifycss      = require('gulp-uglifycss'),
         uglify       = require('gulp-uglify'),
         rename       = require('gulp-rename'),
         concat       = require('gulp-concat'),

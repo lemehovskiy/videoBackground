@@ -1,56 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600');
 
 @import "_reset.scss";
+@import "mixins.scss";
 
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+
 }
 
-header {
-  height: 50px;
-  background: rgba(100, 102, 31, 0.85);
+
+.back-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.spacer {
-  min-height: 300px;
-  background: #60aeff;
+.container {
+  margin: auto;
+
 }
 
-.back-video-section {
-  min-height: 100vh;
-  position: relative;
-  background: rgba(0, 0, 0, 0.32);
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-  }
-
-  .video-type {
-    z-index: 1;
-    position: absolute;
-    color: white;
-    font-size: 100px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+section {
+  padding: 0 20px;
 }
 
-.back-video {
-  overflow: hidden;
 
-  video, iframe {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 
-  }
-}
+@import "partials/section-intro";
+@import "partials/section-features-list";

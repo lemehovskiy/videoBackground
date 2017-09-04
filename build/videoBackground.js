@@ -2,32 +2,58 @@
 
 /*
 
-Background Video
+ Background video cover
 
-Author: lemehovskiy
+ Author: lemehovskiy
 
  */
 
 (function ($) {
 
-    $.fn.backgroundVideo = function () {
+    $.fn.videoBackground = function () {
 
-        var _width = $(this).width();
-        var _height = $(this).height();
-        var _ratio_x = $(this).data('ratio-x') || 16;
-        var _ratio_y = $(this).data('ratio-y') || 9;
-        var _video = $(this).find('video, iframe');
+        $(this).each(function () {
 
-        if (_width / _height > _ratio_x / _ratio_y) {
-            _video.css({
-                "width": _width,
-                "height": _width / _ratio_y * _ratio_x
+            var $this = $(this);
+
+            var ratio_x = $this.data('ratio-x') || 16,
+                ratio_y = $this.data('ratio-y') || 9,
+                video = $this.find('video, iframe');
+
+            $(this).css({
+                overflow: 'hidden'
             });
-        } else {
-            _video.css({
-                "width": _height / _ratio_y * _ratio_x,
-                "height": _height
+
+            video.css({
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: 'translate(-50%, -50%)'
             });
+
+            resize($this, video, ratio_x, ratio_y);
+
+            $(window).on('resize load', function () {
+                resize($this, video, ratio_x, ratio_y);
+            });
+        });
+
+        function resize($this_e, $this_v, ratio_x, ratio_y) {
+
+            var width = $this_e.outerWidth();
+            var height = $this_e.outerHeight();
+
+            if (width / height > ratio_x / ratio_y) {
+                $this_v.css({
+                    "width": width,
+                    "height": width / ratio_y * ratio_x
+                });
+            } else {
+                $this_v.css({
+                    "width": height / ratio_y * ratio_x,
+                    "height": height
+                });
+            }
         }
     };
 })(jQuery);
