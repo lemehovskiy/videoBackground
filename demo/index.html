@@ -141,11 +141,12 @@
             var player = new YT.Player(players[i], {
                 playerVars: {
                     'autoplay': 1,
+                    'loop': 1,
                     'rel': 0,
                     'showinfo': 0,
                     'controls': 0,
                     'modestbranding': 1,
-                    'loop': 1
+                    'playlist': players[i].getAttribute("data-yt-id")
 
                 },
                 videoId: players[i].getAttribute("data-yt-id"),
