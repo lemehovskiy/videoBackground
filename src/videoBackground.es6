@@ -1,6 +1,6 @@
 /*
 
- Background video cover
+ Video background
 
  Author: lemehovskiy
 
@@ -8,15 +8,34 @@
 
 (function ($) {
 
-    $.fn.videoBackground = function () {
+    $.fn.videoBackground = function (options) {
 
-        $(this).each(function(){
+            let settings = $.extend({
+                ratio_x: 16,
+                ratio_y: 9
+            }, options);
+
+
+            $(this).each(function(){
 
             let $this = $(this);
 
-            let ratio_x = $this.data('ratio-x') || 16,
-                ratio_y = $this.data('ratio-y') || 9,
+            let ratio_x = settings.ratio_x,
+                ratio_y = settings.ratio_y,
                 video = $this.find('video, iframe');
+
+
+            let dataOptions = $this.data('video-background');
+
+            if (dataOptions != undefined) {
+                if (dataOptions.hasOwnProperty('ratio-x')) {
+                    ratio_x = dataOptions.ratio_x;
+                }
+
+                if (dataOptions.hasOwnProperty('ratio-y')) {
+                    ratio_y = dataOptions.ratio_y;
+                }
+            }
 
             $(this).css({
                 overflow: 'hidden',

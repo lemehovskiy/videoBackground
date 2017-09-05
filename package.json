@@ -1,17 +1,16 @@
 {
-  "name": "WP_Theme",
+  "name": "video_background",
   "version": "1.0.0",
-  "description": "WP_Theme",
+  "description": "video background",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-uglifycss": "^1.0.6",
-    "gulp-util": "^3.0.7",
-    "streamqueue": "^1.1.1"
+    "jquery": ">=1.7"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.0",
     "gulp": "^3.9.1",
+    "gulp-uglifycss": "^1.0.6",
+    "streamqueue": "^1.1.1",
+    "babel-preset-es2015": "^6.24.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
@@ -29,8 +28,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "theme"
+    "video",
+    "html5 video",
+    "youtube video",
+    "video background",
+    "jquery"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lemehovskiy/videoBackground"
+  },
   "author": "lemehovskiy",
   "license": "ISC"
 }
+

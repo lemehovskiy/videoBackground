@@ -62,6 +62,6 @@ gulp.task('scripts', function() {
 
 // configure which files to watch and what tasks to use on file changes
 gulp.task('watch', ['styles', 'scripts'], function() {
-    gulp.watch('demo/sass/*.scss', ['styles']);
+    gulp.watch('demo/sass/**/*.scss', ['styles']);
     gulp.watch('src/videoBackground.es6', ['scripts']);
 });

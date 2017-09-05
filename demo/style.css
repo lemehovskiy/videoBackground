@@ -70,6 +70,9 @@ section {
   -ms-flex-align: center;
   align-items: center;
   color: white; }
+  .section-intro .container {
+    position: relative;
+    z-index: 1; }
   .section-intro:before {
     content: '';
     position: absolute;
@@ -77,7 +80,8 @@ section {
     top: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.15); }
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1; }
   .section-intro .title {
     font-size: 50px;
     text-transform: uppercase;

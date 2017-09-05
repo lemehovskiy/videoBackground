@@ -104,7 +104,8 @@
                 </div>
                 <div class="img-col">
                     <div class="img-wrap html-video-background">
-                        <video src="video/SampleVideo_color.mp4" loop muted autoplay></video>
+                        <video src="video/SampleVideo_color.mp4" autoplay muted>
+                        </video>
                     </div>
                 </div>
             </li>
@@ -121,9 +122,19 @@
 
 <script>
 
+    //loop fix fix
+    document.getElementsByTagName('video')[0].onended = function () {
+        this.load();
+        this.play();
+    };
+
+
+    //init videoBackground for html video
     $('.html-video-background').videoBackground();
 
 
+
+    //init youtube
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
@@ -164,6 +175,8 @@
 
         event.target.mute();
 
+
+        //init videoBackground for youtube video
         $('.youtube-video-background').videoBackground();
 
     }
