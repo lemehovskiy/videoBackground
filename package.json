@@ -2,7 +2,7 @@
   "name": "video_background",
   "version": "1.0.0",
   "description": "video background",
-  "main": "index.js",
+  "main": "build/videoBackground.js",
   "dependencies": {
     "jquery": ">=1.7"
   },
