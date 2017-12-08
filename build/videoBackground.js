@@ -74,7 +74,7 @@
             if (width / height > ratio_x / ratio_y) {
                 $this_v.css({
                     "width": width,
-                    "height": width / ratio_y * ratio_x
+                    "height": width / ratio_x * ratio_y
                 });
             } else {
                 $this_v.css({
