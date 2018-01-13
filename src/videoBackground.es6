@@ -9,7 +9,6 @@
 
 (function ($) {
 
-
     $.fn.videoBackground = function (options) {
 
         let settings = $.extend({
@@ -76,8 +75,6 @@
                 });
             }
         }
-
     };
-
 
 })(jQuery);
